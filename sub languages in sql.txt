@@ -1,0 +1,91 @@
+sub languages in sql
+===================
+1.ddl(data definition language)
+2.dml(data manipulate language)
+3.dcl(data combine language)
+4.tcl(transacation control language)
+5.dql/drl(data query language)/(data reterive language)
+
+1.ddl
+======
+this is 1st sub language in sql we have 5 commands
+1.create
+2.alter
+3.sp_rename
+4.drop
+5.truncate
+
+1.create
+==========
+this query is used to create database
+syntax:-
+create database<dbname>
+ex:-
+create database db45
+use db45
+how to create table
+=====================
+syntax:-
+create table<tn>(column1<datatype>-----------column)
+ex:-
+create table student(sid int,sname varchar(10),sfees money)
+
+2.alter again classed into 4 types
+1.alter-column
+to change column size of the data type
+syntax:-
+======
+alter table<tn>alter column columnname<data type>[size]
+ex:-
+alter table student alter column sname varchar(100)
+2.alter add
+to add existing table in the database
+syntax:
+======
+alter table<tn> add column name
+ex:-
+alter table student add  saddr varchar(100)
+3.alter-drop
+to drop or delete column for existing table
+syntax:-
+alter table<tn>drop column name
+ex:-
+alter table student drop column sid
+4.sp_rename
+to change the column name for the existing table
+syntax:-
+=====
+sp_rename '<tn>.columnanme'>,'<newcolumname>'
+ex:-
+sp_rename 'student.sname','studentanm'
+
+3.sp_rename
+===========
+to change old table name to new table name
+syntax:-
+======
+sp_rename '<oldtn>','<newtn>'
+ex:-
+sp_rename 'student','employee'
+
+4.drop
+======
+drop for existing table permantely deleted
+syntax
+======
+drop table<tn>
+ex:-
+drop table employee
+5.truncate
+=========
+will delete rows but in truncate we cannot use where clause condition
+syntax:-
+truncate table<tn>
+
+
+2.dml(data manipulate language)
+===============================
+it is 2nd sub language in sql
+1.insert
+2.update
+3.delete
